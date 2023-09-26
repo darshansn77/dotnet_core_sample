@@ -14,3 +14,10 @@ pool:
 
 steps:
 - task: NuGetToolInstaller@1
+- task: HCLAppScanOnCloud@2
+  inputs:
+    AppSecTestService: 'TestHCL'
+    applications: 'd7eb5e8a-06f0-4eef-bd60-14f09db23305'
+    scanname: 'test'
+    scantype: 'static'
+    scanMethod: 'IRX'
